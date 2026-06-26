@@ -21,13 +21,10 @@ func _physics_process(delta):
 
 func _on_jugador_tocado(body):
 	if body.name == "Jugador":
-		# Verificamos si el jugador viene desde arriba
-		# Si la velocidad Y del jugador es positiva, está cayendo = saltó encima
-		if body.velocity.y > 0:
-			# El jugador saltó encima — eliminamos el enemigo
-			# y hacemos que el jugador rebote un poco hacia arriba
-			body.velocity.y = -200.0
+		# Obtenemos la posición del jugador y del enemigo
+		# Si el jugador está arriba del enemigo, lo elimina
+		if body.global_position.y < global_position.y - 10:
+			body.velocity.y = -300.0
 			queue_free()
 		else:
-			# El jugador tocó al enemigo de lado — Game Over
 			get_tree().change_scene_to_file("res://game_over.tscn")

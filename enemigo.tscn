@@ -7,9 +7,8 @@
 radius = 19.0
 height = 38.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0qt0c"]
-radius = 19.0
-height = 38.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0bm4c"]
+size = Vector2(40, 38)
 
 [node name="Enemigo" type="CharacterBody2D" unique_id=1040916153]
 script = ExtResource("1_a5tj2")
@@ -26,4 +25,4 @@ shape = SubResource("CapsuleShape2D_slpbn")
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" unique_id=591255691]
-shape = SubResource("CapsuleShape2D_0qt0c")
+shape = SubResource("RectangleShape2D_0bm4c")
