@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://ccfvabf6nnsix" path="res://jugador.tscn" id="1_wrbek"]
 [ext_resource type="Texture2D" uid="uid://cpvscgw8tjvl6" path="res://sheet.png" id="2_h06de"]
 [ext_resource type="PackedScene" uid="uid://dhbcm060n1hfu" path="res://moneda.tscn" id="3_7gdj4"]
+[ext_resource type="Texture2D" uid="uid://dd5g5kq0ud1mh" path="res://icon.svg" id="4_j87l1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7gdj4"]
 texture = ExtResource("2_h06de")
@@ -705,3 +706,24 @@ offset_right = 40.0
 offset_bottom = 23.0
 offset_transform_position = Vector2(20, 20)
 text = "Monedas: 0"
+
+[node name="BtnIzquierda" type="TouchScreenButton" parent="HUD" unique_id=1774799817]
+position = Vector2(20, 520)
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_j87l1")
+action = "ui_left"
+visibility_mode = 1
+
+[node name="BtnDerecha" type="TouchScreenButton" parent="HUD" unique_id=1428025136]
+position = Vector2(120, 520)
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_j87l1")
+action = "ui_right"
+visibility_mode = 1
+
+[node name="BtnSalto" type="TouchScreenButton" parent="HUD" unique_id=968811625]
+position = Vector2(70, 460)
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_j87l1")
+action = "ui_accept"
+visibility_mode = 1
