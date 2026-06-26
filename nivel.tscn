@@ -709,21 +709,21 @@ text = "Monedas: 0"
 
 [node name="BtnIzquierda" type="TouchScreenButton" parent="HUD" unique_id=1774799817]
 position = Vector2(20, 520)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.8, 0.3)
 texture_normal = ExtResource("4_j87l1")
 action = "ui_left"
 visibility_mode = 1
 
 [node name="BtnDerecha" type="TouchScreenButton" parent="HUD" unique_id=1428025136]
-position = Vector2(120, 520)
-scale = Vector2(0.3, 0.3)
+position = Vector2(152, 520)
+scale = Vector2(0.8, 0.3)
 texture_normal = ExtResource("4_j87l1")
 action = "ui_right"
 visibility_mode = 1
 
 [node name="BtnSalto" type="TouchScreenButton" parent="HUD" unique_id=968811625]
-position = Vector2(70, 460)
-scale = Vector2(0.3, 0.3)
+position = Vector2(1050, 520)
+scale = Vector2(0.8, 0.3)
 texture_normal = ExtResource("4_j87l1")
 action = "ui_accept"
 visibility_mode = 1
