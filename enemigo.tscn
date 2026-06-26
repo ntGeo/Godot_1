@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dkp42iv10yt3g"]
+
+[ext_resource type="Script" uid="uid://bwvun4kch8ljn" path="res://enemigo.gd" id="1_a5tj2"]
+[ext_resource type="Texture2D" uid="uid://dd5g5kq0ud1mh" path="res://icon.svg" id="1_becj5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_slpbn"]
+radius = 19.0
+height = 38.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0qt0c"]
+radius = 19.0
+height = 38.0
+
+[node name="Enemigo" type="CharacterBody2D" unique_id=1040916153]
+script = ExtResource("1_a5tj2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1842657590]
+modulate = Color(1, 0.31706655, 0.19868049, 1)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_becj5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=780736127]
+shape = SubResource("CapsuleShape2D_slpbn")
+
+[node name="AreaDeteccion" type="Area2D" parent="." unique_id=1898928440]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccion" unique_id=591255691]
+shape = SubResource("CapsuleShape2D_0qt0c")
