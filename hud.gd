@@ -1,11 +1,13 @@
 extends CanvasLayer
 
 func _ready():
-	# Esperamos un frame para que el viewport esté listo
 	await get_tree().process_frame
 	
 	var pantalla = get_viewport().get_visible_rect().size
 	
-	$BtnIzquierda.position = Vector2(20, pantalla.y - 120)
-	$BtnDerecha.position = Vector2(150, pantalla.y - 120)
-	$BtnSalto.position = Vector2(pantalla.x - 150, pantalla.y - 120)
+	# Botones izquierda y derecha — abajo a la izquierda
+	$BtnIzquierda.position = Vector2(30, pantalla.y - 80)
+	$BtnDerecha.position = Vector2(200, pantalla.y - 80)
+	
+	# Botón salto — abajo a la derecha con más margen por el scale
+	$BtnSalto.position = Vector2(pantalla.x - 180, pantalla.y - 80)
