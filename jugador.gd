@@ -15,6 +15,11 @@ const FUERZA_SALTO = -400.0
 # Así si alguien cambia la gravedad global, el jugador la respeta automáticamente.
 var gravedad = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+# _ready() se ejecuta una sola vez cuando el jugador aparece en la escena
+func _ready():
+	# Inicia la animación idle automáticamente al comenzar el juego
+	$AnimatedSprite2D.play("idle")
+
 # _physics_process() se ejecuta 60 veces por segundo, sincronizado con el motor de física.
 # "delta" es el tiempo transcurrido desde el último frame (~0.016 segundos).
 func _physics_process(delta):

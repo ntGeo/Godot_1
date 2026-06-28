@@ -1,7 +1,29 @@
 [gd_scene format=3 uid="uid://ccfvabf6nnsix"]
 
 [ext_resource type="Script" uid="uid://drddclw6mnfnj" path="res://jugador.gd" id="1_16k11"]
-[ext_resource type="Texture2D" uid="uid://dd5g5kq0ud1mh" path="res://icon.svg" id="2_omvyu"]
+[ext_resource type="Texture2D" uid="uid://djogcoy0qtdae" path="res://CABALLERO2.png" id="2_omvyu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8o684"]
+atlas = ExtResource("2_omvyu")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukil5"]
+atlas = ExtResource("2_omvyu")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_slpbn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8o684")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukil5")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_shl25"]
 radius = 20.0
@@ -10,10 +32,11 @@ height = 60.0
 [node name="Jugador" type="CharacterBody2D" unique_id=1736270042]
 script = ExtResource("1_16k11")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1887405543]
-position = Vector2(0, -30)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_omvyu")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=620519635]
+position = Vector2(0, -24.000002)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_slpbn")
+animation = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2121831709]
 position = Vector2(0, -30)
