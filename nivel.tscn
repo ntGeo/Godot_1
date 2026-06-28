@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dhbcm060n1hfu" path="res://moneda.tscn" id="3_7gdj4"]
 [ext_resource type="Texture2D" uid="uid://dd5g5kq0ud1mh" path="res://icon.svg" id="4_j87l1"]
 [ext_resource type="PackedScene" uid="uid://dkp42iv10yt3g" path="res://enemigo.tscn" id="5_ymy7k"]
+[ext_resource type="Script" uid="uid://cbniji5eumlqi" path="res://hud.gd" id="6_d04yg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7gdj4"]
 texture = ExtResource("2_h06de")
@@ -723,6 +724,7 @@ position = Vector2(454, -25)
 position = Vector2(635, -23)
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=2035949622]
+script = ExtResource("6_d04yg")
 
 [node name="Contador" type="Label" parent="HUD" unique_id=388798468]
 offset_left = 8.0
