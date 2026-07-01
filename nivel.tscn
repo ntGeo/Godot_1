@@ -735,26 +735,20 @@ offset_transform_position = Vector2(20, 20)
 text = "Monedas: 0"
 metadata/_edit_use_anchors_ = true
 
-[node name="BtnIzquierda" type="TouchScreenButton" parent="HUD" unique_id=1774799817]
-position = Vector2(20, 632)
-scale = Vector2(1.5, 0.5)
-texture_normal = ExtResource("4_j87l1")
-action = "ui_left"
-visibility_mode = 1
-
-[node name="BtnDerecha" type="TouchScreenButton" parent="HUD" unique_id=1428025136]
-position = Vector2(272, 632)
-scale = Vector2(1.5, 0.5)
-texture_normal = ExtResource("4_j87l1")
-action = "ui_right"
-visibility_mode = 1
-
 [node name="BtnSalto" type="TouchScreenButton" parent="HUD" unique_id=968811625]
 position = Vector2(1074, 632)
 scale = Vector2(1.5, 0.5)
 texture_normal = ExtResource("4_j87l1")
 action = "ui_accept"
 visibility_mode = 1
+
+[node name="Joystick" type="VirtualJoystick" parent="HUD" unique_id=1608569893]
+offset_left = 8.0
+offset_top = 648.0
+offset_right = 48.0
+offset_bottom = 688.0
+action_up = &""
+action_down = &""
 
 [node name="Enemigo" parent="." unique_id=1040916153 instance=ExtResource("5_ymy7k")]
 position = Vector2(214, 50)
