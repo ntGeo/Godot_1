@@ -48,3 +48,9 @@ func _physics_process(delta):
 	# Este valor puede ajustarse según el tamaño del nivel.
 	if position.y > 800:
 		get_tree().change_scene_to_file("res://game_over.tscn")
+	
+	# Voltear el sprite según la dirección de movimiento
+	if direccion > 0:
+		$AnimatedSprite2D.flip_h = false  # mirando a la derecha
+	elif direccion < 0:
+		$AnimatedSprite2D.flip_h = true   # mirando a la izquierda
